@@ -1,9 +1,20 @@
 import initial from "./initial";
 
+const addPlayer = (state, {player}) => {
+    let players = state.players;
+    return (
+        {...state,
+            players: [...players, player],
+            player: "",   
+        }
+    );
+};
+
+
+
 let reducer = (state, action) => {
     switch(action.type) {
-        case "increment": return {...state, numOfPlayers: state.numOfPlayers + 1 }
-        case "save": return { state, action };
+        case "addPlayer": return addPlayer(state, action);
         case "reset": return { ...initial };
         default: return state;
     }
