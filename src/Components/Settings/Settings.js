@@ -3,7 +3,7 @@ import React from 'react';
 const handleAdd = (addPlayer) => (e) => {
     e.preventDefault()
     addPlayer(document.getElementById("player_name").value)
-    document.getElementById("player_name").value = ""
+    document.getElementById("player_name").value = "";
 
 }
 
