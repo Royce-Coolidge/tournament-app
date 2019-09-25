@@ -6,8 +6,7 @@ const handleAdd = (addPlayer) => (e) => {
     document.getElementById("player_name").value = "";
 
 }
-
-export const Settings = ({ players, addPlayer, createTournament, submitted, numOfPlayers }) => {
+const Settings = ({ players, addPlayer, createTournament, submitted, numOfPlayers }) => {
 const isEven = submitted && numOfPlayers % 2 === 0;
     return (
         <div className="text-center">
