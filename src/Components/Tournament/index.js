@@ -1,0 +1,1 @@
+export { TournamentConnected as Tournament } from "./container";
