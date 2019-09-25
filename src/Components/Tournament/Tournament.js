@@ -1,14 +1,22 @@
 import React from 'react';
-import './Tournament.scss';
-import Player from "../Player/Player";
+import './tournament.scss';
+//import Player from "../Player/";
 
+
+  
 export const Tournament = ( {players}) => {
 
     return (
         <div className="tournament_container">
+            <h1>First Round Matches</h1>
                 <div className="grid_4_player">
-                    <div className="round_1">
-                        <Player />
+                    <div className="col">
+                        <div>
+                            <p>{ players[0] }</p>
+                            <p>{ players[1]}</p>
+                            <p>{ players[2]}</p>
+                            <p>{ players[3]}</p>
+                        </div>
                     </div>
                     <div className="round_2">
                         <div>Winner 1</div>

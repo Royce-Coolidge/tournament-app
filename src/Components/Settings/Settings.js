@@ -38,3 +38,5 @@ const isEven = submitted && numOfPlayers % 2 === 0;
         </div>
     )
 }
+
+export default Settings;

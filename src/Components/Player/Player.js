@@ -5,9 +5,12 @@ export const Player = ( {players}) => {
 
     return (
         <div>
-            {players.map((player, index) =>
-                <button key ={ index} className="rounded-pill">{ player }</button>
+            <ul className="list-group">
+            { players.map((player, index) =>
+                <li key ={ index } className="list-group-item">{ player }
+                </li>
             )}
+            </ul>
         </div>
 
     )
