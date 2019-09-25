@@ -1,0 +1,1 @@
+export { PlayerConnected as Player } from "./container"
