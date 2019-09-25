@@ -1,21 +1,34 @@
-import initial from "./initial";
+import { ADD_PLAYER, RESET, SUBMIT } from './action-types'
 
-const addPlayer = (state, {player}) => {
-    let players = state.players;
-    return (
-        {...state,
-            players: [...players, player],
-            player: "",   
-        }
-    );
-};
+const initialState = {
+    playerName: "",
+    numOfPlayers: 0,
+    players: [],
+    submitted: false,
+}
 
-
-
-let reducer = (state, action) => {
+let reducer = (state = initialState, action) => {
+    
     switch(action.type) {
-        case "addPlayer": return addPlayer(state, action);
-        case "reset": return { ...initial };
+        case (ADD_PLAYER): {
+            return ({
+                ...state,
+                players : [...state.players, action.payload],
+                numOfPlayers: state.numOfPlayers + 1,
+                
+            })
+        }
+        case (RESET): {
+            return ({
+                ...initialState,
+            })
+        }
+        case (SUBMIT): {
+            return ({
+                ...state,
+                submitted: state.submitted = true,
+            })
+        }
         default: return state;
     }
 };
