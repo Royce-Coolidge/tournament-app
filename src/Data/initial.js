@@ -21,7 +21,17 @@ const initial = {
                 
     },
     {   id: 4,
-        name: "Maff",
+        name: "Jim",
+        roundId: 1,
+                
+    },
+    {   id: 4,
+        name: "Jasper",
+        roundId: 1,
+                
+    },
+    {   id: 4,
+        name: "George",
         roundId: 2,
                 
     },

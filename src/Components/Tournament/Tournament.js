@@ -22,10 +22,25 @@ let Tournament = ({ players }) => {
                         { players.map((player, index) => {
                             if (player.roundId === 1){
                                 return (
-                                <tr key={ index }>
+                                <tr key={ player.id }>
                                     <th> { player.name }</th>
-                                </tr>
-                                )      
+                                </tr>)      
+                            }
+                            if(player.roundId === 2)
+                            {
+                                return (
+                                <tr key={ player.id }>
+                                    <th></th>
+                                    <th> { player.name }</th>
+                                </tr>)      
+                            }if(player.roundId === 3)
+                            {
+                                return (
+                                <tr key={ player.id }>
+                                    <th></th>
+                                    <th></th>
+                                    <th> { player.name }</th>
+                                </tr>)      
                             }
                         })}
                     </tbody> 
