@@ -1,11 +1,11 @@
 import React from 'react';
 import './tournament.scss';
-import Matches from "../Match/";
+import Bracket from "../Bracket/";
 
 
 let Tournament = () => (
     <>
-        <Matches />
+        <Bracket />
     </>
 )
 

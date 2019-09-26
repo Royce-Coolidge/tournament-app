@@ -1,22 +1,24 @@
-import { ADD_PLAYER, RESET, SUBMIT } from './action-types'
+import { ADD_PLAYER, RESET, SUBMIT, WINNER } from './action-types'
 
 const initialState = {
     playerName: "",
     numOfPlayers: 0,
-    players: ["Rowley", "Matilda", "Fergus", "Sholto"],
+    players: [],
     submitted: false,
     matches: [],
+    brackets:[],
+    winners:[],
 }
 
-let matchMake = (state = initialState) =>{
-    
-    for (let i = 0; i < state.players.length; i += 1) {
-        let match = state.players.slice(i, i + 2)
-        return {
-            matches: state.matches.push(match)
-        }
+let randomiser = (state = initialState, action) =>{
+    let players = state.players;
+    return {
+        ...state,
+        players: players.sort(function() { return .5 - Math.random() }),
+        submitted: state.submitted = true,
     }
 }
+
 
 let reducer = (state = initialState, action) => {
     
@@ -34,11 +36,11 @@ let reducer = (state = initialState, action) => {
                 ...initialState,
             })
         }
-        case (SUBMIT): {
+        case (SUBMIT): return randomiser(state, action)
+        case (WINNER): {
             return ({
                 ...state,
-                submitted: state.submitted = true,
-                matches: matchMake(),
+                winners: [...state.winners, action.payload]
             })
         }
         default: return state;
