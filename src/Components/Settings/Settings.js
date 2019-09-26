@@ -6,6 +6,8 @@ const handleAdd = (addPlayer) => (e) => {
     document.getElementById("player_name").value = "";
 
 }
+
+
 const Settings = ({ players, addPlayer, createTournament, submitted, numOfPlayers }) => {
 const isEven = submitted && numOfPlayers % 2 === 0;
     return (

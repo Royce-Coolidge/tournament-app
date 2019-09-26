@@ -1,16 +1,14 @@
 import { ADD_PLAYER, RESET, SUBMIT, WINNER } from './action-types'
+import initial from './initial'
 
-const initialState = {
-    playerName: "",
-    numOfPlayers: 0,
-    players: [],
-    submitted: false,
-    matches: [],
-    brackets:[],
-    winners:[],
-}
 
-let randomiser = (state = initialState, action) =>{
+
+
+
+
+
+
+let randomiser = (state, action) =>{
     let players = state.players;
     return {
         ...state,
@@ -20,7 +18,7 @@ let randomiser = (state = initialState, action) =>{
 }
 
 
-let reducer = (state = initialState, action) => {
+let reducer = (state, action) => {
     
     switch(action.type) {
         case (ADD_PLAYER): {
@@ -33,7 +31,7 @@ let reducer = (state = initialState, action) => {
         }
         case (RESET): {
             return ({
-                ...initialState,
+                ...initial,
             })
         }
         case (SUBMIT): return randomiser(state, action)
