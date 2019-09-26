@@ -2,31 +2,19 @@ import { ADD_PLAYER, RESET, SUBMIT, WINNER } from './action-types'
 import initial from './initial'
 
 
-
-
-
-
-
-
-let randomiser = (state, action) =>{
-    let players = state.players;
-    return {
-        ...state,
-        players: players.sort(function() { return .5 - Math.random() }),
-        submitted: state.submitted = true,
-    }
-}
-
-
 let reducer = (state, action) => {
     
     switch(action.type) {
         case (ADD_PLAYER): {
+            let players = state.players;
+            
             return ({
                 ...state,
-                players : [...state.players, action.payload],
-                numOfPlayers: state.numOfPlayers + 1,
-                
+                players :[...players,  {
+                            id: (+players.length +1),
+                            name: action.payload,
+                            roundId: 1,
+                        }]
             })
         }
         case (RESET): {
@@ -34,7 +22,12 @@ let reducer = (state, action) => {
                 ...initial,
             })
         }
-        case (SUBMIT): return randomiser(state, action)
+        case (SUBMIT): {
+            return ({
+                ...state,
+                submitted: state.submitted =true,
+            })
+        }
         case (WINNER): {
             return ({
                 ...state,

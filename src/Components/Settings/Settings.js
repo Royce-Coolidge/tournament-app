@@ -27,7 +27,7 @@ const isEven = submitted && numOfPlayers % 2 === 0;
                 <ul className="list-group mt-3">
                     {players.map((player, index) => 
                         <li className="list-group-item" key={ index }>
-                            {index + 1 }. {player}
+                            {index + 1 }. {player.name}
                         </li>
                     )}
                 </ul>
