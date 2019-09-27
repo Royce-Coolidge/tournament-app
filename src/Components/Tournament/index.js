@@ -1,15 +1,16 @@
 import { connect } from 'react-redux';
 import Tournament  from './Tournament';
-//import { actions } from '../../Data';
+import * as actions from "../../Data/actions";
 
 const mapStateToProps = state => ({
-    players: state.players,
+    rounds: state.rounds,
     numOfPlayers: state.numOfPlayers,
     submitted: state.submitted, 
 })
 
 const mapDispatchToProps = dispatch => ({
-    
+	addPlayer: value => dispatch(actions.addPlayer(value)),
+	createTournament: () => dispatch(actions.submit()),
 })
 
 export default connect( mapStateToProps, mapDispatchToProps)(Tournament)

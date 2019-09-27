@@ -1,17 +1,30 @@
 import { ADD_PLAYER, RESET, SUBMIT, WINNER } from './action-types'
 import initial from './initial'
+import {shuffle} from "../Components/Tournament/services";
+
+
+const addMatchId = (players) => {
+	let matchId = 0
+	return players.map((player, index) => {
+
+		index % 2 === 0 && matchId++
+
+		return ({ ...player, matchId })
+	})
+}
+
+
 
 
 let reducer = (state, action) => {
     
     switch(action.type) {
         case (ADD_PLAYER): {
-            let players = state.players;
-            
+
             return ({
                 ...state,
-                players :[...players,  {
-                            id: (+players.length +1),
+                players:[...state.players,  {
+                            id: (state.players.length +1),
                             name: action.payload,
                             roundId: 1,
                         }]
@@ -25,7 +38,9 @@ let reducer = (state, action) => {
         case (SUBMIT): {
             return ({
                 ...state,
-                submitted: state.submitted =true,
+                players: [],
+                rounds: [ ...state.rounds, state.rounds.length ? addMatchId(state.players) : addMatchId(shuffle(state.players)) ],
+                submitted: state.submitted = true,
             })
         }
         case (WINNER): {
