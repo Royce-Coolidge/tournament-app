@@ -6,38 +6,39 @@ const initial = {
         id: 1,
         name: "Rowley",
         roundId: 1,
+        matchId: 1
                 
     },
     {   
         id: 2,
         name: "Jack",
         roundId: 1,
+        matchId: 1
                 
     },
     {   
         id: 3,
         name: "Maff",
         roundId: 1,
+        matchId: 2
                 
     },
     {   id: 4,
         name: "Jim",
         roundId: 1,
+        matchId: 2
                 
     },
-    {   id: 4,
-        name: "Jasper",
-        roundId: 1,
-                
-    },
-    {   id: 4,
-        name: "George",
-        roundId: 2,
-                
-    },
+    
 ],
     submitted: false,
-    matches: [],
+    matches: [
+        { 
+            id: 1,
+            player1: '',
+            player2: ''
+        }
+    ],
     rounds:[
         {
         roundId: 1,

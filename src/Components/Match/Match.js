@@ -1,8 +1,7 @@
 import React from 'react';
 import './match.scss';
 
-export const Match = ( {player1, player2}) => {
-
+export const Match = ( player1, player2 ) => {
 
     return (
         <>
