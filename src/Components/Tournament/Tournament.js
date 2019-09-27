@@ -1,6 +1,6 @@
 import React from 'react';
 import './tournament.scss';
-//import Match from "../Match";
+import Match from "../Match";
 
 
 
@@ -26,21 +26,19 @@ let Tournament = ({ players }) => {
     // }
 
 
-    
-    var player = {}
-    var acc = function (accumulator, next) {
-        
-        accumulator[next.matchId] = {players:[]};
+    const matches = players.reduce((prev, next) => {
+        if (prev[next.matchId] === prev[prev.matchId]){ // if matchId of player is the same as another player's 
+            prev[next.matchId] = {players:[]} // create match object with empty players
+        }
+        prev[next.matchId].players.push(next.name)
+        return prev
+    },{})
 
-        return accumulator;
-    }
-
-
-    const matches = players.reduce((acc, player) =>{}, {};
     console.log(matches)
 
-    
-    
+   
+
+ 
 
     return (
             <div className="fluid-container">
@@ -50,7 +48,14 @@ let Tournament = ({ players }) => {
                     {/* ROUND 1 COLUMN */}
                         <div className="col-sm">
                             <h1>First Round</h1>
-                                
+                                {
+                                    <Match 
+                                        player1={ matches.players }
+                                        player2={ matches.players }
+                                    />
+                                } 
+
+
                     
                         </div>
                         
