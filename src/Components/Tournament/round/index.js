@@ -6,7 +6,8 @@ import * as actions from "../../../Data/actions";
 const mapStateToProps = state => ({
     rounds: state.rounds,
     numOfPlayers: state.numOfPlayers,
-    submitted: state.submitted, 
+    submitted: state.submitted,
+    players: state.players, 
 })
 
 const mapDispatchToProps = dispatch => ({

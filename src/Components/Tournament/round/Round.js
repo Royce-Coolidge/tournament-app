@@ -8,8 +8,9 @@ players.find(player => player.id === playerId).name
 
 
 
-export const Round = ({ rounds, reset, submitWinners, addPlayer, selectWinner }) =>{
+export const Round = ({ players, rounds, reset, submitWinners, numOfPlayers, selectWinner }) =>{
 	
+
 	return (
 	<>
 			{ rounds.map((round, index) =>
@@ -19,7 +20,7 @@ export const Round = ({ rounds, reset, submitWinners, addPlayer, selectWinner })
 						{ matchCreater(round).map(match => // maps through the matches created by the matchCreater 
 						<>
 							<li key={ index } className={ `list-group-item text-center mb-3 p-5 }`}>
-								<span id="playerBox" className={ `border border-dark p-3 m-3`} onClick={() => selectWinner(playerName(round, match.player1))}>
+								<span id="playerBox" className={ `border border-dark p-3 m-3 `} onClick={() => selectWinner(playerName(round, match.player1))}>
 								{playerName(round, match.player1)}</span>
 
 								<p className="text-center m-4"> vs </p>
@@ -30,9 +31,9 @@ export const Round = ({ rounds, reset, submitWinners, addPlayer, selectWinner })
 						)}
 					</ul>
 
-					<button className="btn btn-danger rounde-pill" onClick={ submitWinners }>Submit Winners</button>
+					<button className={ `btn btn-danger rounde-pill ${ players.length === (numOfPlayers/2) ? null : 'd-none'   }`} onClick={ submitWinners }>Submit Winners</button>
 					<br></br>
-					<button className="btn btn-primary rounde-pill" onClick={ reset }>reset</button>
+					<button className="btn btn-primary rounded-pill" onClick={ reset }>reset</button>
 				</div>
 			)}
 	</>
