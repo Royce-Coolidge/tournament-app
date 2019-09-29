@@ -12,18 +12,7 @@ let Tournament = ({ players }) => {
 
     //let match_1 = players.filter(player => player.matchId === 1)
     //let match_2 = players.filter(player => player.matchId === 2)
-    
-    // for (let i = 0; players.length > i; i += 1) {
-    //     let current = players[i];
-    //     let next  = players[i + 1];
-    //     if( current.matchId === next.matchid) {
-    //         return (
-    //                 <Match
-    //                 player1={current}
-    //                 player2={next}
-    //                 />    ) 
-    //         }
-    // }
+
 
 
     const matches = players.reduce((prev, next) => {
@@ -48,12 +37,12 @@ let Tournament = ({ players }) => {
                     {/* ROUND 1 COLUMN */}
                         <div className="col-sm">
                             <h1>First Round</h1>
-                                {
+                                {/* {
                                     <Match 
                                         player1={ matches.players }
                                         player2={ matches.players }
                                     />
-                                } 
+                                }  */}
 
 
                     
