@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "git@github.com:Royce-Coolidge/tournament-app.git/static/css/main.1853fd6c.chunk.css",
+    "main.js": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/main.c93c8a7c.chunk.js",
+    "main.js.map": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/main.c93c8a7c.chunk.js.map",
+    "runtime-main.js": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/runtime-main.6b92ac3d.js",
+    "runtime-main.js.map": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/runtime-main.6b92ac3d.js.map",
+    "static/js/2.581bdb73.chunk.js": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/2.581bdb73.chunk.js",
+    "static/js/2.581bdb73.chunk.js.map": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/2.581bdb73.chunk.js.map",
+    "index.html": "git@github.com:Royce-Coolidge/tournament-app.git/index.html",
+    "precache-manifest.2ac61625b19be05efca8da322449f9e1.js": "git@github.com:Royce-Coolidge/tournament-app.git/precache-manifest.2ac61625b19be05efca8da322449f9e1.js",
+    "service-worker.js": "git@github.com:Royce-Coolidge/tournament-app.git/service-worker.js",
+    "static/css/main.1853fd6c.chunk.css.map": "git@github.com:Royce-Coolidge/tournament-app.git/static/css/main.1853fd6c.chunk.css.map"
+  }
+}
