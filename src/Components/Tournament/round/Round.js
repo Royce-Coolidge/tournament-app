@@ -9,7 +9,9 @@ players.find(player => player.id === playerId).name
 
 
 
-export const Round = ({ rounds, addPlayer, reset, submitWinners, players, numOfPlayers }) =>
+export const Round = ({ rounds, addPlayer, reset, submitWinners, players, numOfPlayers }) =>{
+	
+	return (
 	<>
 			{ rounds.map((round, index) =>
 				<div className="d-flex align-items-center flex-column">
@@ -18,11 +20,9 @@ export const Round = ({ rounds, addPlayer, reset, submitWinners, players, numOfP
 						{ matchCreater(round).map(match =>
 						<>
 							<li key={ index } className="list-group-item text-center mb-3 p-5" >
-								<span 
-								id="playerBox" 
-								className={ `border border-dark p-3 m-3 ${ numOfPlayers > 100 ? 'disableEvent': null}`} 
-								onClick={() => addPlayer(playerName(round, match.player1))}>
+								<span id="playerBox" className={ `border border-dark p-3 m-3`} onClick={() => addPlayer(playerName(round, match.player1))}>
 								{playerName(round, match.player1)}</span>
+
 								<p className="text-center m-4"> vs </p>
 								
 								<span id="playerBox" className="border border-dark p-3" onClick={() => addPlayer(playerName(round, match.player2))}>{playerName(round, match.player2)}</span>
@@ -37,6 +37,8 @@ export const Round = ({ rounds, addPlayer, reset, submitWinners, players, numOfP
 				</div>
 			)}
 	</>
+	)
+}
 
 	
 //On click of a player box, the playerName function checks if the player in the rounds array (all players) has the same matchId
