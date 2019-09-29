@@ -7,11 +7,13 @@ const handleAdd = (addPlayer) => (e) => {
 
 }
 
+// FIRST PAGE OF APP WHERE USER ENTERS PLAYER NAMES //
 
 const Settings = ({ players, addPlayer, createTournament, submitted, numOfPlayers }) => {
 const isEven = submitted && numOfPlayers % 2 === 0;
     return (
         <div className="text-center">
+            
             <h1 className="text-center">Table Tennis Tournament App</h1>
             <form onSubmit={ handleAdd(addPlayer) } className="add-player container">
                 <div className="form-group">
@@ -24,18 +26,21 @@ const isEven = submitted && numOfPlayers % 2 === 0;
             {/* PLAYER NAME LIST  */}
 
             <div className="text-left">
-                <ul className="list-group mt-3">
+                <ul className="list-group mt-3 mb-3">
                     {players.map((player, index) => 
-                        <li className="list-group-item" key={ index }>
+                        <li className={ `list-group-item list-group-item${ numOfPlayers === 4 || numOfPlayers === 8 || numOfPlayers === 16 ? '-success' : '' }` }key={ index }>
                             {index + 1 }. {player.name}
                         </li>
+                        
                     )}
                 </ul>
+                <p className={ `text-center d-${ numOfPlayers > 0 ? 'block' : 'none' }`}><span className={ `badge badge-${ numOfPlayers === 4 || numOfPlayers === 8 || numOfPlayers === 16 ? 'success' : 'danger'}` }>
+                            { numOfPlayers === 4 || numOfPlayers === 8 || numOfPlayers === 16 ? 'Ready to start the Tournament!' : 'Please enter 4, 8 or 12 players'}
+                            </span></p>
             </div>
 
             <button className="btn btn-danger rounded-pill mt-5" onClick={ createTournament } >Create Tournament</button>
-            <br></br>
-            { !submitted ? null : <p>{ isEven ? "Success" : "Please add an even number of players"}</p>}
+            {/* onClick pushes list of players into rounds array */}
         </div>
     )
 }

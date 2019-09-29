@@ -1,12 +1,15 @@
-import { createStore } from "redux";
+import { createStore, compose } from "redux";
 import reducer from "./reducer";
 import initial from "./initial";
+import persistState from "redux-localstorage";
 
+const composeEnhancers = 
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose ;
 
 const store = createStore( 
     reducer,
     initial, 
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    composeEnhancers(persistState())
 );
 
 
