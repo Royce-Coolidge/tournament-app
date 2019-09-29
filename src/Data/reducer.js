@@ -47,6 +47,7 @@ let reducer = (state, action) => {
                     ...state,
                     players: [],
                     rounds: [ ...state.rounds, addMatchId(state.players)],
+                    winners: [...state.rounds]
                 })
         }
         
