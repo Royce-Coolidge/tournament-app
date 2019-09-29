@@ -21,7 +21,7 @@ export const matchCreater = (players) => {
 
 // 2. previousMatch variable created to store curreNT, which will be the first object in the players array.
 
-// 3. REDUCE FUNCTION:  stores first item (player) in the players array to previousMatch variable.
+// 3. REDUCE FUNCTION:  stores first item (player) of the players array (passed in from Round.js) to previousMatch variable.
 
 // 4.  IF STATEMENT: If the next item (player) in the array has the same matchId as the player stored in the previousMatch variable then...
 

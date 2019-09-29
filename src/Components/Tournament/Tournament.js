@@ -8,7 +8,7 @@ let Tournament = () => {
     return (
         <div className="fluid-container">
           <Header />
-                <div className="row">
+                <div className="row m-0">
                   <Round />
                     
                 </div>

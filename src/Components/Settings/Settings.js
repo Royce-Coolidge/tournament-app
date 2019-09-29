@@ -14,7 +14,7 @@ const isEven = submitted && numOfPlayers % 2 === 0;
     return (
         <div className="text-center">
             
-            <h1 className="text-center">Table Tennis Tournament App</h1>
+            <h1 className="text-center headerFont">Table Tennis Tournament App</h1>
             <form onSubmit={ handleAdd(addPlayer) } className="add-player container">
                 <div className="form-group">
                     <label> Name:</label>
