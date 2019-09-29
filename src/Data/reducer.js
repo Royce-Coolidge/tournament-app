@@ -1,4 +1,4 @@
-import { ADD_PLAYER, RESET, SUBMIT, SUBMIT_WINNERS } from './action-types'
+import { ADD_PLAYER, RESET, SUBMIT, SUBMIT_WINNERS, SELECT_WINNER } from './action-types'
 import initial from './initial'
 import {shuffle} from "../Components/Tournament/services";
 
@@ -18,7 +18,7 @@ let reducer = (state, action) => {
     
     switch(action.type) {
         case (ADD_PLAYER): {
-
+            // 
             return ({
                 ...state,
                 players:[...state.players,  {
@@ -26,8 +26,22 @@ let reducer = (state, action) => {
                             name: action.payload,
                             roundId: 1,
                         }],
+                numOfPlayers: state.numOfPlayers +=1,
             })
         }
+        case (SELECT_WINNER): {
+            // 
+            return ({
+                ...state,
+                players:[...state.players,  {
+                            id: (state.players.length +1),
+                            name: action.payload,
+                            roundId: 1,
+                        }],
+                
+            })
+        }
+
         case (RESET): {
             return ({
                 ...initial,
