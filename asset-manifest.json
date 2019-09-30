@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "git@github.com:Royce-Coolidge/tournament-app.git/static/css/main.1853fd6c.chunk.css",
-    "main.js": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/main.c93c8a7c.chunk.js",
-    "main.js.map": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/main.c93c8a7c.chunk.js.map",
-    "runtime-main.js": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/runtime-main.6b92ac3d.js",
-    "runtime-main.js.map": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/runtime-main.6b92ac3d.js.map",
-    "static/js/2.581bdb73.chunk.js": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/2.581bdb73.chunk.js",
-    "static/js/2.581bdb73.chunk.js.map": "git@github.com:Royce-Coolidge/tournament-app.git/static/js/2.581bdb73.chunk.js.map",
-    "index.html": "git@github.com:Royce-Coolidge/tournament-app.git/index.html",
-    "precache-manifest.2ac61625b19be05efca8da322449f9e1.js": "git@github.com:Royce-Coolidge/tournament-app.git/precache-manifest.2ac61625b19be05efca8da322449f9e1.js",
-    "service-worker.js": "git@github.com:Royce-Coolidge/tournament-app.git/service-worker.js",
-    "static/css/main.1853fd6c.chunk.css.map": "git@github.com:Royce-Coolidge/tournament-app.git/static/css/main.1853fd6c.chunk.css.map"
+    "main.css": "/tournament-app/static/css/main.d868b529.chunk.css",
+    "main.js": "/tournament-app/static/js/main.9ccd6ab4.chunk.js",
+    "main.js.map": "/tournament-app/static/js/main.9ccd6ab4.chunk.js.map",
+    "runtime-main.js": "/tournament-app/static/js/runtime-main.63471e9a.js",
+    "runtime-main.js.map": "/tournament-app/static/js/runtime-main.63471e9a.js.map",
+    "static/js/2.7ce9bb60.chunk.js": "/tournament-app/static/js/2.7ce9bb60.chunk.js",
+    "static/js/2.7ce9bb60.chunk.js.map": "/tournament-app/static/js/2.7ce9bb60.chunk.js.map",
+    "index.html": "/tournament-app/index.html",
+    "precache-manifest.e2e853cdedc2c02a5a7e5650e025f25c.js": "/tournament-app/precache-manifest.e2e853cdedc2c02a5a7e5650e025f25c.js",
+    "service-worker.js": "/tournament-app/service-worker.js",
+    "static/css/main.d868b529.chunk.css.map": "/tournament-app/static/css/main.d868b529.chunk.css.map"
   }
 }
