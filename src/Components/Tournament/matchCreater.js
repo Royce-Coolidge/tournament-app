@@ -5,8 +5,8 @@ export const matchCreater = (players) => {
 		if(previousMatch && current.matchId === previousMatch.matchId) { 
 			acc.push({
 				id: matchId,
-				player1: previousMatch.id,
-				player2: current.id,
+				player1: previousMatch.name,
+				player2: current.name,
 			})
 			matchId ++
 		}

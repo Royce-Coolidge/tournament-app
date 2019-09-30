@@ -38,7 +38,7 @@ let reducer = (state, action) => {
                             name: action.payload,
                             roundId: 1,
                         }],
-                
+                winners:[]
             })
         }
 
@@ -61,7 +61,7 @@ let reducer = (state, action) => {
                     ...state,
                     players: [],
                     rounds: [ ...state.rounds, addMatchId(state.players)],
-                    winners: [...state.rounds]
+                    winners: []
                 })
         }
         
