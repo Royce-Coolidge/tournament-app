@@ -18,18 +18,18 @@ export const Round = ({ players, rounds, reset, submitWinners, numOfPlayers, sel
 						{ matchCreater(round).map(match => // maps through the matches created by the matchCreater 
 						<>
 							<li key={ index } className={ `list-group-item text-center mb-3 p-5 }`}>
-								<span id="playerBox" className={ `border p-3 m-3 list-group-item-${winners.find(player => player === match.player1) ? "success" : "primary"} `} onClick={() => selectWinner(match.player1)}>
+								<span id="playerBox" className={ `border p-3 m-3 list-group-item-${winners.find(player => player === match.player1) ? "success disableEvent" : "primary"} `} onClick={() => selectWinner(match.player1)}>
 								{playerName(round, match.player1)}</span>
 
 								<p className="text-center m-4"> vs </p>
 								
-								<span id="playerBox" className={ `border p-3 m-3 list-group-item-${winners.find(player => player === match.player2) ? "success" : "primary"} `} onClick={() => selectWinner(match.player2)}>{playerName(round, match.player2)}</span>
+								<span id="playerBox" className={ `border p-3 m-3 list-group-item-${winners.find(player => player === match.player2) ? "success disableEvent" : "primary"} `} onClick={() => selectWinner(match.player2)}>{playerName(round, match.player2)}</span>
 							</li>
 						</>
 						)}
 					</ul>
 					<p> Click on the player to progress to the next round </p>
-					<button className={ `btn btn-danger rounde-pill ${ players.length === (numOfPlayers/2) ? null : 'd-none'   }`} onClick={ submitWinners }>Submit Winners</button>
+					<button className={ `btn btn-danger rounde-pill `} onClick={ submitWinners }>Submit Winners</button>
 					<br></br>
 					<button className="btn btn-primary rounded-pill" onClick={ reset }>reset</button>
 				</div>
