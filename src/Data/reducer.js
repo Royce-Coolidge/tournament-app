@@ -35,10 +35,11 @@ let reducer = (state, action) => {
                 ...state,
                 players:[...state.players,  {
                             id: (state.players.length +1),
-                            name: action.payload,
+                            name: action.name,
                             roundId: 1,
                         }],
-                winners:[]
+                winners:[...state.winners, action.name
+                ]
             })
         }
 

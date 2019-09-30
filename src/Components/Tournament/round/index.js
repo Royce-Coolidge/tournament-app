@@ -7,11 +7,12 @@ const mapStateToProps = state => ({
     rounds: state.rounds,
     numOfPlayers: state.numOfPlayers,
     submitted: state.submitted,
-    players: state.players, 
+    players: state.players,
+    winners: state.winners, 
 })
 
 const mapDispatchToProps = dispatch => ({
-	selectWinner: value => dispatch(actions.selectWinner(value)),
+	selectWinner: (id, name) => dispatch(actions.selectWinner(id, name)),
     submitWinners: () => dispatch(actions.submitWinners()),
     reset: () => dispatch(actions.reset()),
 })
