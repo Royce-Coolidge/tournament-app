@@ -1,15 +1,15 @@
 import React from 'react';
+import './settings.css';
 
 const handleAdd = (addPlayer) => (e) => {
     e.preventDefault()
     addPlayer(document.getElementById("player_name").value)
     document.getElementById("player_name").value = "";
-
 }
 
 // FIRST PAGE OF APP WHERE USER ENTERS PLAYER NAMES //
 
-const Settings = ({ players, addPlayer, createTournament, submitted, numOfPlayers }) => {
+const Settings = ({ players, addPlayer, createTournament, reset, numOfPlayers }) => {
 
     return (
         <div className="text-center">
@@ -31,16 +31,15 @@ const Settings = ({ players, addPlayer, createTournament, submitted, numOfPlayer
                         <li className={ `list-group-item list-group-item${ numOfPlayers === 4 || numOfPlayers === 8 || numOfPlayers === 16 ? '-success' : '' }` }key={ index }>
                             {index + 1 }. {player.name}
                         </li>
-                        
                     )}
                 </ul>
-                <p className={ `text-center d-${ numOfPlayers > 0 ? 'block' : 'none' }`}><span className={ `badge badge-${ numOfPlayers === 4 || numOfPlayers === 8 || numOfPlayers === 16 ? 'success' : 'danger'}` }>
-                            { numOfPlayers === 4 || numOfPlayers === 8 || numOfPlayers === 16 ? 'Ready to start the Tournament!' : 'Please enter 4, 8 or 12 players'}
+                <p className={ `text-center d-${ numOfPlayers > 0 ? 'block' : 'none' }`}><span className={ `badge badge-${ numOfPlayers%2 === 0 ? 'success' : 'danger'}` }>{ numOfPlayers%2 === 0 ? 'Ready to start the Tournament!' : 'Please enter an even amount of players'}
                             </span></p>
+                <p className={ `text-center greenFont` }>{ numOfPlayers === 4 || numOfPlayers === 8 || numOfPlayers === 16 ? "This would be a great size for a tournament!" : ''}</p>
             </div>
-
-            <button className="btn btn-danger rounded-pill mt-5" onClick={ createTournament } >Create Tournament</button>
-            {/* onClick pushes list of players into rounds array */}
+            <button className="btn btn-danger rounded-pill mt-3 mb-3" onClick={ createTournament } >Create Tournament</button>
+            <br></br>
+            <button className="btn btn-primary rounded-pill" onClick={ reset }>reset</button>
         </div>
     )
 }

@@ -11,7 +11,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     addPlayer: value => dispatch(actions.addPlayer(value)),
-    createTournament: () => dispatch(actions.submit())
+    createTournament: () => dispatch(actions.submit()),
+    reset: () => dispatch(actions.reset()),
 })
 
 export default connect( mapStateToProps, mapDispatchToProps)(Settings)
