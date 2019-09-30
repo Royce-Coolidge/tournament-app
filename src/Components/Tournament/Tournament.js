@@ -9,8 +9,7 @@ let Tournament = () => {
         <div className="fluid-container">
           <Header />
                 <div className="row m-0">
-                  <Round />
-                    
+                  <Round />   
                 </div>
         </div>
     )
