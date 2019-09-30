@@ -10,7 +10,7 @@ const handleAdd = (addPlayer) => (e) => {
 // FIRST PAGE OF APP WHERE USER ENTERS PLAYER NAMES //
 
 const Settings = ({ players, addPlayer, createTournament, submitted, numOfPlayers }) => {
-const isEven = submitted && numOfPlayers % 2 === 0;
+
     return (
         <div className="text-center">
             
@@ -18,7 +18,7 @@ const isEven = submitted && numOfPlayers % 2 === 0;
             <form onSubmit={ handleAdd(addPlayer) } className="add-player container">
                 <div className="form-group">
                     <label> Name:</label>
-                    <input id="player_name" type="text" className={ `form-control border border-${ isEven ? "success" : null }` } />
+                    <input id="player_name" type="text" className={ `form-control border border` } />
                 </div>
                 <button className="btn btn-block btn-primary">Add Player</button>
             </form>
