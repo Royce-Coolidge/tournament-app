@@ -17,8 +17,9 @@ export const submitWinners = () => ({
     type: SUBMIT_WINNERS,
 })
 
-export const selectWinner = ( name) => ({
+export const selectWinner = ( roundId, name) => ({
     type: SELECT_WINNER,
+    roundId,
     name,
 })
 

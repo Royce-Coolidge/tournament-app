@@ -37,7 +37,7 @@ const Settings = ({ players, addPlayer, createTournament, reset, numOfPlayers })
                             </span></p>
                 <p className={ `text-center greenFont` }>{ numOfPlayers === 4 || numOfPlayers === 8 || numOfPlayers === 16 ? "This would be a great size for a tournament!" : ''}</p>
             </div>
-            <button className="btn btn-danger rounded-pill mt-3 mb-3" onClick={ createTournament } >Create Tournament</button>
+            <button className="btn btn-danger rounded-pill mt-3 mb-3" onClick={ createTournament }>Create Tournament</button>
             <br></br>
             <button className="btn btn-primary rounded-pill" onClick={ reset }>reset</button>
         </div>

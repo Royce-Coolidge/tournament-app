@@ -36,7 +36,7 @@ let reducer = (state, action) => {
                 players:[...state.players,  {
                             id: (state.players.length +1),
                             name: action.name,
-                            roundId: 1,
+                            roundId: action.roundId +=1,
                         }],
                 winners:[...state.winners, action.name
                 ]

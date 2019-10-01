@@ -7,6 +7,7 @@ export const matchCreater = (players) => {
 				id: matchId,
 				player1: previousMatch.name,
 				player2: current.name,
+				roundId: current.roundId
 			})
 			matchId ++
 		}
