@@ -38,8 +38,7 @@ let reducer = (state, action) => {
                             name: action.name,
                             roundId: action.roundId +=1,
                         }],
-                winners:[...state.winners, action.name
-                ]
+                champion: state.totalRounds === state.rounds.length ? action.name : null,
             })
         }
 
@@ -55,6 +54,7 @@ let reducer = (state, action) => {
                 rounds: [ ...state.rounds, state.rounds.length ? addMatchId(state.players) : addMatchId(shuffle(state.players)) ],
                 submitted: state.submitted = true,
                 numOfPlayers: state.players.length,
+                totalRounds: Math.log2(state.players.length),
             })
         }
         case (SUBMIT_WINNERS): {
@@ -62,7 +62,9 @@ let reducer = (state, action) => {
                     ...state,
                     players: [],
                     rounds: [ ...state.rounds, addMatchId(state.players)],
-                    winners: []
+                    roundsPlayed: state.roundsPlayed + 1,
+                    final: (state.roundsPlayed + 1) === state.totalRounds ? true : false, 
+
                 })
         }
         

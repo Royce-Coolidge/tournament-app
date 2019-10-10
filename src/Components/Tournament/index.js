@@ -6,6 +6,8 @@ const mapStateToProps = state => ({
     rounds: state.rounds,
     numOfPlayers: state.numOfPlayers,
     submitted: state.submitted, 
+    totalRounds: state.totalRounds,
+    champion: state.champion,
 })
 
 const mapDispatchToProps = dispatch => ({

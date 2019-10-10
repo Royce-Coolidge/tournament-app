@@ -1,11 +1,12 @@
 const initial = {
     playerName: "",
     numOfPlayers: 0,
-    players:
-    [],
-	rounds: [],
+    players:[],
+    rounds: [],
+    totalRounds: null,
+    roundsPlayed: 0,
     submitted: false,
-    winners:[],
+    champion: null,
 }
 
 export default initial;
