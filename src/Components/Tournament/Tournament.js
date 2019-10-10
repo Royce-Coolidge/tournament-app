@@ -1,7 +1,7 @@
 import React from 'react';
 import './tournament.scss';
 import Header from '../Header/Header';
-import Round from './Round/';
+import Round from '../Round';
 
 
 let Tournament = () => {

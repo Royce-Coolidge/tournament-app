@@ -1,6 +1,6 @@
 import { ADD_PLAYER, RESET, SUBMIT, SUBMIT_WINNERS, SELECT_WINNER } from './action-types'
 import initial from './initial'
-import {shuffle} from "../Components/Tournament/services";
+import {shuffle} from "../services";
 
 
 const addMatchId = (players) => {
