@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/tournament-app/static/css/main.d868b529.chunk.css",
-    "main.js": "/tournament-app/static/js/main.9ccd6ab4.chunk.js",
-    "main.js.map": "/tournament-app/static/js/main.9ccd6ab4.chunk.js.map",
+    "main.css": "/tournament-app/static/css/main.755567e5.chunk.css",
+    "main.js": "/tournament-app/static/js/main.1db54190.chunk.js",
+    "main.js.map": "/tournament-app/static/js/main.1db54190.chunk.js.map",
     "runtime-main.js": "/tournament-app/static/js/runtime-main.63471e9a.js",
     "runtime-main.js.map": "/tournament-app/static/js/runtime-main.63471e9a.js.map",
-    "static/js/2.7ce9bb60.chunk.js": "/tournament-app/static/js/2.7ce9bb60.chunk.js",
-    "static/js/2.7ce9bb60.chunk.js.map": "/tournament-app/static/js/2.7ce9bb60.chunk.js.map",
+    "static/js/2.6c49d25e.chunk.js": "/tournament-app/static/js/2.6c49d25e.chunk.js",
+    "static/js/2.6c49d25e.chunk.js.map": "/tournament-app/static/js/2.6c49d25e.chunk.js.map",
     "index.html": "/tournament-app/index.html",
-    "precache-manifest.e2e853cdedc2c02a5a7e5650e025f25c.js": "/tournament-app/precache-manifest.e2e853cdedc2c02a5a7e5650e025f25c.js",
+    "precache-manifest.b0f35f1482623bb3fbafbd8867de583c.js": "/tournament-app/precache-manifest.b0f35f1482623bb3fbafbd8867de583c.js",
     "service-worker.js": "/tournament-app/service-worker.js",
-    "static/css/main.d868b529.chunk.css.map": "/tournament-app/static/css/main.d868b529.chunk.css.map"
+    "static/css/main.755567e5.chunk.css.map": "/tournament-app/static/css/main.755567e5.chunk.css.map",
+    "static/media/facebook-brands.svg": "/tournament-app/static/media/facebook-brands.53757d93.svg",
+    "static/media/linkedin-brands.svg": "/tournament-app/static/media/linkedin-brands.1e01f0c0.svg",
+    "static/media/champion.scss": "/tournament-app/static/media/trophy.a95eca84.svg",
+    "static/media/twitter-brands.svg": "/tournament-app/static/media/twitter-brands.37332e64.svg",
+    "static/media/youtube-brands.svg": "/tournament-app/static/media/youtube-brands.c80ca203.svg"
   }
 }
