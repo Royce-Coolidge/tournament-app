@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
     winners: state.winners, 
     roundsPlayed: state.roundsPlayed,
     totalRounds: state.totalRounds,
-    final: state.final,
+    champion: state.champion,
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { matchCreater } from '../../matchCreater';
 
 
 const playerName = (players, playerId) => 
@@ -13,52 +12,50 @@ class Match extends Component {
         super(props)
         this.state = {
             winner: 0,
-            winnerName:'',
-            roundId: 0,
+            matchId: 0,
         }
         this.handlePlayer1 = this.handlePlayer1.bind(this)
         this.handlePlayer2 = this.handlePlayer2.bind(this)
     }
 
-    handlePlayer1(roundId, play1) {
+    handlePlayer1(roundId, play1, matchId) {
         this.props.selectWinner(roundId, play1);
-        this.setState( {winner: 1, winnerName: play1, roundId: roundId} );
+        this.setState( {winner: 1, matchId: matchId} );
     } 
 
-    handlePlayer2(roundId, play2) {
+    handlePlayer2(roundId, play2, matchId) {
         this.props.selectWinner(roundId, play2);
-        this.setState( {winner: 2,winnerName: play2, roundId: roundId} );
+        this.setState( {winner: 2, matchId: matchId} );
+
     }
 
     render() {
-        let { round, key } = this.props;
-        let { winnerName, roundId }= this.state
-
-
+        let { round, key, match } = this.props;
+        let { winner, matchId } =this.state;
+        const style = {}
+        if(winner !== 0){
+            style.pointerEvents = "none"
+        } else {
+            style.pointerEvents = "auto"
+        }
         return (
             <>
-                { matchCreater(round).map(match => // maps through the matches created by the matchCreater 
-                <>
-
-                    <li key={ key } className={ `list-group-item text-center mb-3 p-5 }`}>
+                    <li key={ key } style={ style } className={ `list-group-item text-center mb-3 p-5 }`}>
+                        <p>Match {match.id + 1} </p>
                         <span 
-                            className={ `border p-3 m-3 list-group-item list-group-item-${winnerName === '' ? null : winnerName === match.player1 && roundId === match.roundId ? "success" : "danger"}` } 
-                            onClick={() => this.handlePlayer1(match.roundId, match.player1) }>
-                                {console.log(match.roundId, match.player1)}
+                            className={ `border p-3 m-3 list-group-item list-group-item-${ winner === 1 && matchId === match.id ?"success": null }` } 
+                            onClick={() => this.handlePlayer1(match.roundId, match.player1, match.id) }>
                             {playerName(round, match.player1)}
                         </span>
 
                         <p className="text-center m-4"> vs </p>
                         
                         <span 
-                            className={ `border p-3 m-3 list-group-item list-group-item-${winnerName === '' ? null : winnerName === match.player2 && roundId === match.roundId ? "success" : "danger"}` } 
-                            onClick={() => this.handlePlayer2(match.roundId, match.player2) }>
+                            className={ `border p-3 m-3 list-group-item list-group-item-${ winner === 2 && matchId === match.id ?"success": null }` } 
+                            onClick={() => this.handlePlayer2(match, match.player2, match.id) }>
                             {playerName(round, match.player2)}
                         </span>
                     </li>
-
-                </>
-                )}
             </>
         )
     }

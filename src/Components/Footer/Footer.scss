@@ -1,17 +1,18 @@
-$icon-width: 30px;
-$icon-height: 30px;
+$icon-width: 50px;
+$icon-height: 50px;
 
 .socials {
 	text-align: center;
 
  	img {
 		width: $icon-width;
-		height:$icon-height;
+		height: $icon-height;
 		display: inline-block;
 		background-color:#fff0e9;
-		border-radius: 50%;
-		padding: 10px;
-		margin: 5px;
+		border-radius: 35%;
+		padding: 7px;
+		margin: 10px;
+		box-sizing: border-box;
 		
 	}
 }

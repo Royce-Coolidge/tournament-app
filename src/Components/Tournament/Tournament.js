@@ -13,7 +13,7 @@ let Tournament = ( {champion}) => {
           
           <Header />
                 <div className="row m-0">
-    { champion !== null ? <Champion /> :<Round /> }  
+                    { champion !== null ? <Champion /> : <Round /> }  
                 </div>
         </div>
     )
