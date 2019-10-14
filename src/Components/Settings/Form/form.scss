@@ -1,0 +1,23 @@
+@import "../../../assets/scss/fonts";
+
+
+.button {
+    width: 20%;
+    transition: background 1s;
+    background:$primaryfontcolor;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 5px;
+    font-family:$primaryfont;
+}
+
+.button:hover{
+    transform: rotate(360deg);
+    background: green;
+}
+
+label {
+    font-family: $primaryfont;
+    color: $primaryfontcolor;
+}
+

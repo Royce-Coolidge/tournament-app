@@ -1,0 +1,14 @@
+@import "../../../../assets/scss/fonts";
+
+
+p {
+    font-family: $primaryfont;
+    color: $primaryfontcolor;
+    text-align: center;
+}
+
+.pad {
+    font-family: $primaryfont;
+    width: 30%;
+    margin: auto;
+}
