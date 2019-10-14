@@ -19,13 +19,11 @@ class Match extends Component {
     }
 
     handlePlayer1(roundId, play1) {
-        let { players } = this.props;
         this.props.selectWinner(roundId, play1);
         this.setState( {winner: 1} );
     } 
 
     handlePlayer2(roundId, play2) {
-        let { players } = this.props;
         this.props.selectWinner(roundId, play2);
         this.setState( {winner: 2} );
     }
@@ -33,10 +31,8 @@ class Match extends Component {
     render() {
         let { round, key, players } = this.props;
         let { winner }= this.state
-        
-        //let play1Win = winner === 0 ? "primary" : winner === 1 && p1Win ? "success" : "danger"; 
-        //let play2Win = winner === 0 ? "primary" : winner === 2 && p1Win ? "success" : "danger";
-   
+
+
 
         return (
             <>

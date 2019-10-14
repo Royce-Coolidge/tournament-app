@@ -5,8 +5,6 @@ import Form from './Form';
 import Footer from '../Footer/Footer'
 
 
-
-
 // FIRST PAGE OF APP WHERE USER ENTERS PLAYER NAMES //
 
 const Settings = () => {

@@ -7,9 +7,10 @@ import './App.scss';
 
 function App( {submitted, champion} ) {
   return (
-   <>
-    { !submitted ? <Settings /> : <Tournament /> }
-
+   <> 
+    <div className="my-container">
+      { !submitted ? <Settings /> : <Tournament /> }
+    </div>
    </>
   );
 }

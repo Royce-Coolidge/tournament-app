@@ -1,0 +1,17 @@
+$icon-width: 30px;
+$icon-height: 30px;
+
+.socials {
+	text-align: center;
+
+ 	img {
+		width: $icon-width;
+		height:$icon-height;
+		display: inline-block;
+		background-color:#fff0e9;
+		border-radius: 50%;
+		padding: 10px;
+		margin: 5px;
+		
+	}
+}
