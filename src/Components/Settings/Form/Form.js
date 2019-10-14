@@ -1,6 +1,7 @@
 import React from 'react';
 import List from'./List';
-import './form.css'
+import './form.scss'
+
 
 const handleAdd = (addPlayer) => (e) => {
     e.preventDefault()
@@ -14,15 +15,15 @@ const Form = ( {addPlayer, createTournament, reset}) => {
         <>
             <form onSubmit={ handleAdd(addPlayer) } className="add-player container">
                 <div className="form-group">
-                    <label> Name:</label>
-                    <input id="player_name" type="text" className={ `form-control border border` } />
+                    <label> Enter Player Names:</label>
+                    <input id="player_name" type="text" placeholder="Jasper Carrot" className={ `form-control border border` } />
                 </div>
-                <button className="addButton">Add Player</button>
+                <button className="button">Add Player</button>
             </form>
             <List />
-            <button className="btn btn-danger rounded-pill mt-3 mb-3" onClick={ createTournament }>Create Tournament</button>
+            <button className="button" onClick={ createTournament }>Start Tournament</button>
             <br></br>
-            <button className="btn btn-primary rounded-pill" onClick={ reset }>reset</button>
+            <button className="btn btn-primary rounded-pill" onClick={ reset }>Start Again</button>
         </>
     )
 }   
