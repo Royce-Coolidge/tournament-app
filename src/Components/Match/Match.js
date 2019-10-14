@@ -13,28 +13,30 @@ class Match extends Component {
         super(props)
         this.state = {
             winner: 0,
-            clicked: false,
         }
         this.handlePlayer1 = this.handlePlayer1.bind(this)
         this.handlePlayer2 = this.handlePlayer2.bind(this)
     }
 
     handlePlayer1(roundId, play1) {
-        this.props.selectWinner(roundId, play1)
-        this.setState ({winner: 1, clicked: true})
-    }
+        let { players } = this.props;
+        this.props.selectWinner(roundId, play1);
+        this.setState( {winner: 1} );
+    } 
 
     handlePlayer2(roundId, play2) {
-        
+        let { players } = this.props;
         this.props.selectWinner(roundId, play2);
-        this.setState ({winner: 2, clicked: true});
+        this.setState( {winner: 2} );
     }
-
 
     render() {
         let { round, key, players } = this.props;
-        let p1Win = this.winner === 0 ? "primary" : this.winner === 1 ? "success" : "danger";
-        let p2Win = this.winner === 0 ? "primary" : this.winner === 2 ? "success" : "danger";
+        let { winner }= this.state
+        
+        //let play1Win = winner === 0 ? "primary" : winner === 1 && p1Win ? "success" : "danger"; 
+        //let play2Win = winner === 0 ? "primary" : winner === 2 && p1Win ? "success" : "danger";
+   
 
         return (
             <>
@@ -43,7 +45,7 @@ class Match extends Component {
 
                     <li key={ key } className={ `list-group-item text-center mb-3 p-5 }`}>
                         <span 
-                            className={ `border p-3 m-3 list-group-item list-group-item-${ p1Win }` } 
+                            className={ `border p-3 m-3 list-group-item list-group-item-` } 
                             onClick={() => this.handlePlayer1(match.roundId, match.player1) }>
                             {playerName(round, match.player1)}
                         </span>
@@ -51,7 +53,7 @@ class Match extends Component {
                         <p className="text-center m-4"> vs </p>
                         
                         <span 
-                            className={ `border p-3 m-3 list-group-item list-group-item-${ p2Win }` } 
+                            className={ `border p-3 m-3 list-group-item list-group-item-` } 
                             onClick={() => this.handlePlayer1(match.roundId, match.player1) }>
                             {playerName(round, match.player2)}
                         </span>
