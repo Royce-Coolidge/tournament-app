@@ -25,17 +25,16 @@ import './champion.scss';
 export const Champion = ( {champion, reset }) => {
     return (
         <div className="champion">
-            <h1 className='headerFont text-center'> And the Championship goes to....</h1>
+            <h1 className='headerFont text-center'> And the Champion is, drum roll please! ....</h1>
     
             <div class="svg-wrapper mt-5">
                 <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                     <rect class="shape" height="60" width="320" />
                 </svg>
-                <div class="text text-center">{ champion }</div>
+                <div class="text winner text-center">{ champion }</div>
             </div>
 
-            <button className="btn btn-primary rounded-pill" onClick={ reset }>Start New Tournament</button>
-            <div id="divOutput"></div>
+            <button className="button mt-5" onClick={ reset }>Start New Tournament</button>
         </div>
     )
 }

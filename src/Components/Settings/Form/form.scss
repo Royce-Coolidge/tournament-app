@@ -2,7 +2,7 @@
 
 
 .button {
-    width: 20%;
+    width: contain;
     transition: background 1s;
     background:$primaryfontcolor;
     cursor: pointer;

@@ -2,12 +2,9 @@ import { connect } from 'react-redux';
 import Match from './Match';
 import * as actions from "../../Data/actions";
 
-const mapStateToProps = ({rounds, numOfPlayers, submitted, players, winners, champion}, {match, key}) => ({
+const mapStateToProps = ({rounds, players}, {match, key}) => ({
     rounds: rounds,
-    numOfPlayers: numOfPlayers,
-    submitted: submitted,
     players: players,
-    winners: winners, 
     match: match,
     key: key,
 })

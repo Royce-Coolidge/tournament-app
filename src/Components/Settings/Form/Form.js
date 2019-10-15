@@ -69,8 +69,8 @@ class Form extends Component {
 
         return (
             <>
-                <form className="add-player container">
-                    <div className="form-group">
+                <form className="add-player container mt-5">
+                    <div className="form-group mt-5">
                         <label> Enter Player Names:</label>
                         <input 
                             id="player_name" 
@@ -85,7 +85,7 @@ class Form extends Component {
                     <button onClick={ (e) => this.handleAdd(e) } className="button">Add Player</button>
                 </form>
                 <List />
-                <div classNam="btn-group">
+                <div classNam="btn-group m-5">
                     <button className="button m-5" onClick={ (e) => this.handleStart(e) }>Start Tournament</button>
                     <button className="button m-5" onClick={ reset }>Start again</button>
                 </div>

@@ -17,5 +17,10 @@ $icon-height: 50px;
 	}
 }
 footer {
-	height: 50px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 4em;
 }

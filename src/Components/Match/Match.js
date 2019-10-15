@@ -40,7 +40,7 @@ class Match extends Component {
         }
         return (
             <>
-                    <li key={ key } style={ style } className={ `list-group-item text-center mb-3 p-5 }`}>
+                    <li key={ key } style={ style } className={ `list-group-item list-group-item-primary text-center mb-1 p-3 }`}>
                         <p>Match {match.id + 1} </p>
                         <span 
                             className={ `border p-3 m-3 list-group-item list-group-item-${ winner === 1 && matchId === match.id ?"success": null }` } 
@@ -48,7 +48,7 @@ class Match extends Component {
                             {playerName(round, match.player1)}
                         </span>
 
-                        <p className="text-center m-4"> vs </p>
+                        <p className="text-center m-2"> vs </p>
                         
                         <span 
                             className={ `border p-3 m-3 list-group-item list-group-item-${ winner === 2 && matchId === match.id ?"success": null }` } 

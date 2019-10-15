@@ -10,7 +10,7 @@ export const Round = ({ totalRounds, rounds, reset, submitWinners }) =>{
 	<>
 			{ rounds.map((round, index) =>
 				<div className="d-flex align-items-center flex-column col-3">
-					<h1 className="text-left align-self-center pl-2 headerFont">
+					<h1 className="text-left align-self-center headerFont">
 						 { (index + 1) === totalRounds ? "Final" : `Round: ${(index + 1)}` }
 					</h1>
 				
@@ -27,11 +27,11 @@ export const Round = ({ totalRounds, rounds, reset, submitWinners }) =>{
 					<p> Click on the player to progress to the next round </p>
 
 					<button 
-						className={ `btn btn-danger rounde-pill `} 
+						className={ `button`} 
 						onClick={ submitWinners }>
 						{ (index + 1) === totalRounds ? `Select the Champion` : `Progress to Round ${(index + 2)}` }</button>
 					<br></br>
-					<button className="btn btn-primary rounded-pill" onClick={ reset }>reset</button>
+					<button className="btn btn-danger rounded-pill" onClick={ reset }>Start Again</button>
 				</div>
 			)}
 	</>
