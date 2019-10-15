@@ -16,12 +16,37 @@
     background: green;
 }
 
+.buttonBig {
+    width: contain;
+    transition: background 1s;
+    background:$primaryfontcolor;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+    font-family:$primaryfont;
+    font-size: 20px;
+}
+
+.buttonBig:hover{
+    transform: rotate(360deg);
+    background: purple;
+}
+
 label {
     font-family: $primaryfont;
     color: $primaryfontcolor;
+    size: 10px;
 }
 
 .error {
     font-family: $primaryfont;
     color: red;
+}
+
+.input {
+    border-radius: 10px;
+    width: 40%;
+    height: 50px;
+    font-family: $primaryfont;
+    text-align: center;
 }

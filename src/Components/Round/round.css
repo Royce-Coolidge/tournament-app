@@ -4,6 +4,7 @@
     pointer-events: none;
 }
 
-.headerFont {
-    font-family: 'Roboto Mono', monospace;
-    };
+.roundHeader {
+    font-size: 40px;
+    font-weight: bold;
+}

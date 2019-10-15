@@ -72,12 +72,13 @@ class Form extends Component {
                 <form className="add-player container mt-5">
                     <div className="form-group mt-5">
                         <label> Enter Player Names:</label>
+                        <br></br>
                         <input 
                             id="player_name" 
                             onChange={ (e) => this.handleChange(e)}
                             type="text" 
                             placeholder="Jasper Carrot" 
-                            className={ `form-control border border-${ nameError || playersError ? "danger" : null }` }
+                            className={ `input border border-${ nameError || playersError ? "danger" : null }` }
                             value={ name } 
                             />
                         <p className="error mt-2">{ playersError ? playersErrorMessage : nameError ? nameErrorMessage : null }</p>
@@ -86,8 +87,8 @@ class Form extends Component {
                 </form>
                 <List />
                 <div classNam="btn-group m-5">
-                    <button className="button m-5" onClick={ (e) => this.handleStart(e) }>Start Tournament</button>
-                    <button className="button m-5" onClick={ reset }>Start again</button>
+                    <button className="buttonBig m-5" onClick={ (e) => this.handleStart(e) }>Start Tournament!</button>
+                    <button className="buttonBig m-5" onClick={ reset }>Start again</button>
                 </div>
             </>
         )   

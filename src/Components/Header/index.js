@@ -2,13 +2,10 @@ import { connect } from 'react-redux';
 import Header from './Header';
 
 
-const mapStateToProps = ({champion, submitted}) => ({
-    champion: champion,
-    submitted: submitted,
+const mapStateToProps = state => ({
+    champion: state.champion,
+    submitted: state.submitted,
 })
 
-const mapDispatchToProps = dispatch => ({
 
-})
-
-export default connect( mapStateToProps, mapDispatchToProps)(Header)
+export default connect( mapStateToProps, null)(Header)

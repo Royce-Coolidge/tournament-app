@@ -10,8 +10,8 @@ export const Round = ({ totalRounds, rounds, reset, submitWinners }) =>{
 	<>
 			{ rounds.map((round, index) =>
 				<div className="d-flex align-items-center flex-column col-3">
-					<h1 className="text-left align-self-center headerFont">
-						 { (index + 1) === totalRounds ? "Final" : `Round: ${(index + 1)}` }
+					<h1 className="align-self-center headerFont roundHeader">
+						 { (index + 1) === totalRounds ? "Final" : `Round ${(index + 1)}` }
 					</h1>
 				
 					<ul className="m-2 p-0">
