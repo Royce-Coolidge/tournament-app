@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2542d73ebf91448ec2a640bc072a84a",
+    "revision": "57c3d84610f73e40bd5414a30accfdeb",
     "url": "/tournament-app/index.html"
   },
   {
-    "revision": "484c024e546b434f33e4",
-    "url": "/tournament-app/static/css/main.92d43237.chunk.css"
+    "revision": "037ca221728335cb8144",
+    "url": "/tournament-app/static/css/main.9ad11794.chunk.css"
   },
   {
     "revision": "16e5c851625132c143d4",
     "url": "/tournament-app/static/js/2.6c49d25e.chunk.js"
   },
   {
-    "revision": "484c024e546b434f33e4",
-    "url": "/tournament-app/static/js/main.74ba1fbd.chunk.js"
+    "revision": "037ca221728335cb8144",
+    "url": "/tournament-app/static/js/main.d4042506.chunk.js"
   },
   {
     "revision": "971ef2e463dfed914df9",
