@@ -10,6 +10,7 @@ function App( {submitted, champion} ) {
    <> 
     <div className="my-container">
       { !submitted ? <Settings /> : <Tournament /> }
+      <div class="push"></div>
     </div>
    </>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import './settings.css';
+import './settings.scss';
 import Header from '../Header/Header'
 import Form from './Form';
 import Footer from '../Footer/Footer'

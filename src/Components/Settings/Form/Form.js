@@ -29,12 +29,16 @@ class Form extends Component {
 
     handleAdd(e) {
         e.preventDefault();
-        let name = this.state.name.trim();
         let { addPlayer } =this.props;
+        let name = this.state.name.trim();
+        let capitalise = (name) => {
+            return name.charAt(0).toUpperCase() + name.slice(1);
+        }
+        let capsName = capitalise(name)
 
-        if( name !== "" && !this.state.players.includes(name)) {
-            addPlayer(document.getElementById("player_name").value)
-            this.setState({name: '', players:[...this.state.players, name]});
+        if( capsName !== "" && !this.state.players.includes(capsName)) {
+            addPlayer(capsName)
+            this.setState({name: '', players:[...this.state.players, capsName]});
         } else {
             this.setState({
                 nameError: true,
@@ -42,11 +46,26 @@ class Form extends Component {
         }
     }
 
+    handleStart(e) {
+        e.preventDefault();
+
+        let { players } = this.props;
+
+        if (players.length >= 4 && Number.isInteger(Math.log2(players.length))) {
+            this.props.createTournament();
+        } else {
+            this.setState({
+                playersError: true,
+            });
+        }
+    }
+
 
     render() {
-        let {createTournament, reset} = this.props;
-        let { nameError, name } = this.state;
+        let { reset } = this.props;
+        let { nameError, name, playersError } = this.state;
         let nameErrorMessage = "Sorry we can't have any duplicate names or blanks, please check the player names and try again";
+        let playersErrorMessage = "Don't forget! You need a minimum of 4 players. The number of players also needs to be a power of 2!";
 
         return (
             <>
@@ -58,17 +77,18 @@ class Form extends Component {
                             onChange={ (e) => this.handleChange(e)}
                             type="text" 
                             placeholder="Jasper Carrot" 
-                            className={ `form-control border border-${ nameError ? "danger" : null }` }
+                            className={ `form-control border border-${ nameError || playersError ? "danger" : null }` }
                             value={ name } 
                             />
-                        <p className="error">{ nameError ? nameErrorMessage : null }</p>
+                        <p className="error mt-2">{ playersError ? playersErrorMessage : nameError ? nameErrorMessage : null }</p>
                     </div>
                     <button onClick={ (e) => this.handleAdd(e) } className="button">Add Player</button>
                 </form>
                 <List />
-                <button className="button mb-4" onClick={ createTournament }>Start Tournament</button>
-                <br></br>
-                <button className="btn button rounded-pill mb-5" onClick={ reset }>Change your mind? Enter player names again</button>
+                <div classNam="btn-group">
+                    <button className="button m-5" onClick={ (e) => this.handleStart(e) }>Start Tournament</button>
+                    <button className="button m-5" onClick={ reset }>Start again</button>
+                </div>
             </>
         )   
     }
