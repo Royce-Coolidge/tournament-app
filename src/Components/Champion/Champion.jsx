@@ -1,26 +1,6 @@
 import React from 'react';
 import './champion.scss';
-
-// const championes = () => {
-//     let { champion } = this.props;
-
-//     let strHTML = '';
-//     let vtop = 0;
-//     let vleft = 0;
-
-//     const style = {
-//         top: 0,
-//         left: 0,
-//     }
-
-//     for (let i = 0; i < 100; i++){
-//         vtop += 5;
-//         vleft += 5;
-//         strHTML += "<span className='winnerStart winnerPost' style={ style.top:" + vtop + "; style.left:" + vleft + "}>{ this.props.champion }</span>";
-//     }
-//     document.getElementById("divOutput").innerHTML = strHTML;
-// }
-
+import Arrow from '../../assets/images/red-arrow.png';
 
 export const Champion = ( {champion, reset }) => {
     return (
@@ -33,8 +13,13 @@ export const Champion = ( {champion, reset }) => {
                 </svg>
                 <div class="text winner text-center">{ champion }</div>
             </div>
+          
 
             <button className="button mt-5" onClick={ reset }>Start New Tournament</button>
+            <div className="animation mt-5">
+                <h1>{ champion }</h1>
+                <img src={ Arrow } alt="red arrow" height="50" width="100"></img>
+            </div>
         </div>
     )
 }

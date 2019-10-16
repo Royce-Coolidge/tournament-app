@@ -65,3 +65,38 @@
     color: $primaryfontcolor;
 
 }
+
+
+.animation {
+  animation-name: stretch;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  text-align: center;
+  border: none;
+}
+
+@keyframes stretch {
+  0%{
+    top: 0; left: 0;
+    background-color: rgb(44, 63, 0);
+    width: 30%;
+    border-radius: 10%; 
+  }
+  20% {
+    background-color:rgb(201, 114, 22);
+  }
+
+  30% {
+    background-color:rgb(201, 171, 22);
+  }
+  100%{
+    background-color: $primaryfontcolor;
+    width:70%;
+    border-radius: 20%;
+  }
+}
