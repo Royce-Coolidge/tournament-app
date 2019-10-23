@@ -21,7 +21,7 @@ My main focus for this challenge was to create 'clean' code that was easily read
 - The initial user-input (inputting player names) page (Settings.js)
 - The main parent component (Tournament.js)
 - A componenent for each round (1st Round, Semi-final, Final etc)(Round.js)
-- a component for each Match (Match.js)
+- A component for each Match (Match.js)
 - Component to show the champion (Champion.js)
 - Component for the Footer (Footer.js)
 
@@ -34,12 +34,14 @@ My main focus for this challenge was to create 'clean' code that was easily read
 
 There were two ways of potentially doing this.
 
-1. add a “matchId” property to the player object and assign that to each player, checking that only 2 players can have the same match Id.
+a. add a “matchId” property to the player object and assign that to each player, checking that only 2 players can have the same match Id.
 
-2. Or another option would be to create a Match object that has “player1” and “player2” properties that are assigned a player each.
+b. Or another option would be to create a Match object that has “player1” and “player2” properties that are assigned a player each.
 
-I decided to do the first option to minimise the number of objects i was using. I added a match id by mapping over the shuffled players array and adding a matchID property to each player object. the trick was that for for every even indexed player, i incremented the matchId. 
+I decided to do option b to minimise the number of objects i was using. I added a match id by mapping over the shuffled players array and adding a matchID property to each player object. the trick was that for for every even indexed player, i incremented the matchId. 
 
 4. I then used the reduce method to go through the shuffled players array and create a match object for each player object that had the same matchID.  The match object assigned the players' playerIDS to the properties player1, player2. I then mapped over this array of match objects, creating a Match component for each one.
 
 I then had my Minimum Viable Product completed. 
+
+From there i added mult-round functionality by adding onClick event listeners to the player names which would puch them back on to the (empty) players array in state. The 'Submit Winners' button would then push this player array on to the round array with a new matchId, creating an array of rrays. 
