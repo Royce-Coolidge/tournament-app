@@ -44,4 +44,4 @@ My main focus for this challenge was to create 'clean' code that was easily read
 
 I then had my Minimum Viable Product completed. 
 
-From there i added mult-round functionality by adding onClick event listeners to the player names which would puch them back on to the (empty) players array in state. The 'Submit Winners' button would then push this player array on to the round array with a new matchId, creating an array of arrays. 
+From there i added multi-round functionality by adding onClick event listeners to the player names which would pucsh them back on to the (empty) players array in state. The 'Submit Winners' button would then push this player array on to the round array with a new matchId, creating an array of arrays(round[0], round[1] etc]. 
