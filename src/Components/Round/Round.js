@@ -27,7 +27,7 @@ export const Round = ({ totalRounds, rounds, reset, submitWinners }) =>{
 					<p> Click on the player to progress to the next round </p>
 
 					<button 
-						className={ `button`} 
+						className={`button`} 
 						onClick={ submitWinners }>
 						{ (index + 1) === totalRounds ? `Select the Champion` : `Progress to Round ${(index + 2)}` }</button>
 					<br></br>

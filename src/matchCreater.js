@@ -34,13 +34,3 @@ export const matchCreater = (players) => {
 
 // 8. The match Id is then incremented so that each new match object has a unique id.
 
-export const winnerCheck = (players, playerName) => {
-	let previousMatch = undefined
-	return players.reduce((acc, current) => {
-		if(previousMatch && current.name === playerName) { 
-			acc = true
-		}
-		previousMatch = current
-		return acc
-	}, false)
-}

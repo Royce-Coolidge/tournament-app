@@ -5,7 +5,7 @@ import Tournament from '../Tournament';
 import './App.scss';
 //import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-function App( {submitted, champion} ) {
+function App( {submitted} ) {
   return (
    <> 
     <div className="my-container">
