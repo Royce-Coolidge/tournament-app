@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
+*[LandingPage}(
 ### tournament-app
 
 Technical challenge set for the last week of the Develop Me course. The MVP should create pairings for a table tennis tournament from a list of user-inputted names.
