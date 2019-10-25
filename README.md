@@ -13,6 +13,17 @@ My main focus for this challenge was to create 'clean' code that was easily read
 - Ramda
 - Bootstrap
 
+### The MVP
+
+The MVP was to create pairings for a table tennis tournament from a list of user-inputted names.
+
+I knew i therefore needed. 
+
+1. An input field
+2. An "add" button - with funtion to create player object to an array
+3. A map funtion to iterate over an array 
+4. A shared property in the player object in order to match players into pairings.  
+
 ## Steps I took
 
 1. Firstly, I mapped out the components i wanted to create. They were:
